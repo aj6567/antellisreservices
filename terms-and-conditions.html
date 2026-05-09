@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions | Antellis Real Estate Services LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: #fff; color: #444; }
+    .tc-header { background: rgb(15,14,12); padding: 0 6%; display: flex; justify-content: space-between; align-items: center; height: 72px; border-bottom: 1px solid rgba(201,168,76,0.25); }
+    .tc-logo { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: rgb(224,201,122); text-decoration: none; letter-spacing: 0.5px; }
+    .tc-logo span { color: rgba(255,255,255,0.85); font-weight: 300; font-style: italic; font-size: 22px; }
+    .tc-nav { display: flex; align-items: center; }
+    .tc-nav a { color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 400; letter-spacing: 1.8px; text-transform: uppercase; padding: 0 20px; height: 72px; display: flex; align-items: center; text-decoration: none; transition: color 0.2s; }
+    .tc-nav a:hover { color: #fff; }
+    .tc-banner { background: rgb(15,14,12); padding: 60px 8%; text-align: center; border-bottom: 3px solid rgb(201,168,76); }
+    .tc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(201,168,76); margin-bottom: 14px; display: block; }
+    .tc-banner h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 500; color: #fff; margin-bottom: 14px; }
+    .tc-meta { font-size: 13px; color: rgba(255,255,255,0.45); display: block; }
+    .tc-body { max-width: 860px; margin: 0 auto; padding: 70px 40px 90px; background: #fff; }
+    .tc-intro { background: rgb(240,237,232); border-left: 5px solid rgb(201,168,76); padding: 24px 28px; margin-bottom: 50px; font-size: 15px; color: rgb(68,68,68); line-height: 1.75; font-style: italic; font-family: 'Lato', sans-serif; }
+    .tc-section { margin-bottom: 50px; }
+    .tc-heading-row { display: flex; align-items: center; gap: 14px; padding-bottom: 12px; border-bottom: 2px solid rgb(201,168,76); margin-bottom: 18px; }
+    .tc-num { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; min-width: 34px; background: rgb(201,168,76); color: #fff; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; border-radius: 50%; flex-shrink: 0; line-height: 34px; text-align: center; }
+    .tc-heading-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: rgb(15,14,12); line-height: 1.2; }
+    .tc-subhead { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; color: rgb(160,120,32); text-transform: uppercase; letter-spacing: 1.2px; margin: 22px 0 10px; display: block; }
+    .tc-p { font-size: 15px; color: rgb(68,68,68); line-height: 1.85; margin-bottom: 14px; font-family: 'Lato', sans-serif; }
+    .tc-p a { color: #a07820; font-weight: 700; text-decoration: none; }
+    .tc-p a:hover { color: rgb(201,168,76); }
+    .tc-list { margin: 10px 0 18px; padding: 0; list-style: none; border-top: 1px solid rgb(232,228,222); }
+    .tc-list li { font-size: 15px; color: rgb(68,68,68); line-height: 1.75; padding: 10px 10px 10px 32px; position: relative; border-bottom: 1px solid rgb(232,228,222); font-family: 'Lato', sans-serif; }
+    .tc-list li::before { content: '›'; position: absolute; left: 12px; top: 10px; color: rgb(201,168,76); font-size: 16px; font-weight: 700; }
+    .tc-sms-box { background: rgb(255,248,238); border: 2px solid rgb(201,168,76); padding: 24px 28px; margin: 20px 0; }
+    .tc-sms-box p { font-size: 14px; color: rgb(85,85,85); line-height: 1.8; margin-bottom: 10px; font-family: 'Lato', sans-serif; }
+    .tc-sms-box p:last-child { margin-bottom: 0; }
+    .tc-sms-box strong { color: rgb(160,120,32); font-weight: 700; }
+    .tc-contact-box { background: rgb(15,14,12); padding: 32px 36px; margin-top: 16px; }
+    .tc-contact-box p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 8px; font-family: 'Lato', sans-serif; line-height: 1.7; }
+    .tc-contact-box strong { color: rgb(224,201,122); }
+    .tc-footer { background: rgb(15,14,12); padding: 30px 6%; text-align: center; font-size: 13px; line-height: 2.4; font-family: 'Lato', sans-serif; color: rgba(255,255,255,0.45); border-top: 1px solid rgba(201,168,76,0.2); }
+    .tc-footer p { color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+    .tc-footer a { color: rgb(201,168,76); text-decoration: none; margin: 0 8px; }
+    .tc-footer a:hover { color: rgb(224,201,122); }
+    @media (max-width: 768px) { .tc-logo { font-size: 18px; } .tc-nav { display: none; } .tc-banner h1 { font-size: 34px; } .tc-body { padding: 40px 20px 60px; } }
+  </style>
+</head>
+<body>
+
+<div class="tc-header">
+  <a href="index.html" class="tc-logo">Antellis Real Estate Services <span>LLC</span></a>
+  <nav class="tc-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#process">How It Works</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</div>
+
+<div class="tc-banner">
+  <span class="tc-eyebrow">Legal Documentation</span>
+  <h1>Terms &amp; Conditions</h1>
+  <span class="tc-meta">Effective Date: March 3, 2026 &nbsp;|&nbsp; Antellis Real Estate Services LLC &nbsp;|&nbsp; Fort Worth, Texas</span>
+</div>
+
+<div class="tc-body">
+  <div class="tc-intro">By accessing or using the website of Antellis Real Estate Services LLC or by submitting any inquiry or opting into our SMS communications program, you agree to be bound by these Terms and Conditions. Please read them carefully.</div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">1</div><span class="tc-heading-title">Agreement to Terms</span></div>
+    <p class="tc-p">By accessing or using the website of Antellis Real Estate Services LLC ("Company," "we," "us," or "our") located at www.antellisreservices.com, or by submitting any inquiry or opting into our SMS communications program, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website or services.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">2</div><span class="tc-heading-title">Description of Services</span></div>
+    <p class="tc-p">Antellis Real Estate Services LLC is a Texas-based real estate solutions company providing the following services:</p>
+    <ul class="tc-list">
+      <li>Direct property purchases and acquisitions</li>
+      <li>Investment property sourcing and off-market deal identification</li>
+      <li>Distressed property solutions for inherited, vacant, or repair-needed homes</li>
+      <li>Transparent, research-backed offers tailored to your property and timeline</li>
+    </ul>
+    <p class="tc-p">Fort Worth based. DFW focused. Built for homeowners and investors who value discretion and speed.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">3</div><span class="tc-heading-title">SMS Communications Terms</span></div>
+    <span class="tc-subhead">Opt-In Consent</span>
+    <p class="tc-p">By submitting your phone number through our website contact form or any other opt-in mechanism, you expressly consent to receive recurring automated and non-automated SMS/text messages from Antellis Real Estate Services LLC. These messages may include:</p>
+    <ul class="tc-list">
+      <li>Property offer updates and follow-ups</li>
+      <li>Service information and appointment confirmations</li>
+      <li>General real estate communications related to your inquiry</li>
+    </ul>
+    <div class="tc-sms-box">
+      <p><strong>Message Frequency:</strong> Varies based on your inquiry and interaction level.</p>
+      <p><strong>Rates:</strong> Message and data rates may apply depending on your mobile carrier and plan.</p>
+      <p><strong>To Opt Out:</strong> Reply <strong>STOP</strong> to any text message at any time. You will receive one final confirmation, then no further messages.</p>
+      <p><strong>For Help:</strong> Reply <strong>HELP</strong> or contact info@antellisreservices.com.</p>
+      <p><strong>No Obligation:</strong> Consent to receive SMS is never required as a condition of purchasing any property or using our services.</p>
+    </div>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">4</div><span class="tc-heading-title">No Real Estate Agency Relationship</span></div>
+    <p class="tc-p">Unless explicitly stated in a separate signed written agreement, Antellis Real Estate Services LLC is acting as a principal buyer or investor — not as a licensed real estate agent or broker representing your interests. You are encouraged to seek independent legal and real estate counsel before entering into any transaction.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">5</div><span class="tc-heading-title">No Obligation to Purchase</span></div>
+    <p class="tc-p">Submission of a property inquiry or receipt of a property analysis does not obligate Antellis Real Estate Services LLC to make an offer or complete a purchase. Any offer made is subject to due diligence, financing, and the execution of a formal written purchase agreement.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">6</div><span class="tc-heading-title">Accuracy of Information</span></div>
+    <p class="tc-p">You agree to provide accurate, current, and complete information when submitting property inquiries. Providing false or misleading information may result in termination of our engagement and potential legal liability.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">7</div><span class="tc-heading-title">Intellectual Property</span></div>
+    <p class="tc-p">All content on this website — including but not limited to text, graphics, logos, and design elements — is the property of Antellis Real Estate Services LLC and is protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from our content without express written permission.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">8</div><span class="tc-heading-title">Limitation of Liability</span></div>
+    <p class="tc-p">To the fullest extent permitted by law, Antellis Real Estate Services LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our website, services, or communications. Our total liability to you for any claim shall not exceed the amount paid by you to us in the three months preceding the claim, if any.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">9</div><span class="tc-heading-title">Disclaimer of Warranties</span></div>
+    <p class="tc-p">Our website and services are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that our website will be uninterrupted or error-free.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">10</div><span class="tc-heading-title">Third-Party Links</span></div>
+    <p class="tc-p">Our website may contain links to third-party websites for your convenience. We have no control over the content or practices of those sites and are not responsible for their content, privacy policies, or terms of use.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">11</div><span class="tc-heading-title">Governing Law &amp; Dispute Resolution</span></div>
+    <p class="tc-p">These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions. Any disputes shall be subject to the exclusive jurisdiction of the state and federal courts located in Tarrant County, Texas.</p>
+    <p class="tc-p">Before initiating any legal action, you agree to first attempt to resolve any dispute informally by contacting us at info@antellisreservices.com. We will use good-faith efforts to resolve the matter within 30 days.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">12</div><span class="tc-heading-title">Indemnification</span></div>
+    <p class="tc-p">You agree to indemnify, defend, and hold harmless Antellis Real Estate Services LLC and its officers, members, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or related to your use of our website or services or your violation of these Terms.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">13</div><span class="tc-heading-title">Privacy</span></div>
+    <p class="tc-p">Your use of our website and services is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review our Privacy Policy at <a href="privacy-policy.html">antellisreservices.com/privacy-policy</a>.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">14</div><span class="tc-heading-title">Changes to These Terms</span></div>
+    <p class="tc-p">We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on this page with an updated effective date. Your continued use of our website or services after any modifications constitutes your acceptance of the updated Terms.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">15</div><span class="tc-heading-title">Entire Agreement</span></div>
+    <p class="tc-p">These Terms and Conditions, together with our Privacy Policy, constitute the entire agreement between you and Antellis Real Estate Services LLC regarding your use of our website and services, and supersede all prior agreements and understandings.</p>
+  </div>
+
+  <div class="tc-section">
+    <div class="tc-heading-row"><div class="tc-num">16</div><span class="tc-heading-title">Contact Us</span></div>
+    <p class="tc-p">If you have any questions about these Terms and Conditions, please contact us:</p>
+    <div class="tc-contact-box">
+      <p><strong>Antellis Real Estate Services LLC</strong></p>
+      <p>Fort Worth, Texas</p>
+      <p>Email: info@antellisreservices.com</p>
+      <p>Phone: (817) 842-3400</p>
+      <p>Website: www.antellisreservices.com</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="tc-footer">
+  <p>© 2026 Antellis Real Estate Services LLC. A Texas Limited Liability Company. Serving Fort Worth and surrounding areas.</p>
+  <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-and-conditions.html">Terms of Use</a> | <a href="index.html">Home</a></p>
+</div>
+
+</body>
+</html>
