@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antellis Real Estate Services LLC | Fort Worth, Texas</title>
+  <meta name="description" content="AI-Powered Real Estate Acquisitions in Fort Worth, Texas. Fast cash offers for motivated sellers." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e0c97a;
+      --gold-dark: #a07820;
+      --dark: #080705;
+      --dark2: #2a2a2a;
+      --white: #ffffff;
+      --white80: rgba(255,255,255,0.8);
+      --white85: rgba(255,255,255,0.85);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--dark2);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero-wrapper {
+      position: relative;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg') center 60% / cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(8,7,5,0.82) 0%, rgba(8,7,5,0.6) 40%, rgba(8,7,5,0.78) 100%);
+      z-index: 1;
+    }
+
+    /* ── HEADER / NAV ── */
+    header {
+      position: relative;
+      z-index: 2;
+      padding: 0 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: rgba(255,255,255,0.85);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 22px;
+    }
+
+    nav { display: flex; align-items: center; }
+
+    nav a {
+      color: var(--white80);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0 20px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--white);
+      border-bottom-color: var(--gold);
+    }
+
+    nav a.active { font-weight: 700; color: var(--white); }
+
+    /* ── HERO CONTENT ── */
+    .hero-content-wrap {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 6% 100px;
+    }
+
+    .hero-content { max-width: 600px; }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 54px;
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+      font-weight: 300;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--white85);
+      line-height: 1.8;
+      margin-bottom: 38px;
+      font-weight: 300;
+      max-width: 460px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+    }
+
+    /* ── BUTTON ── */
+    .btn {
+      display: inline-block;
+      padding: 16px 36px;
+      background: var(--gold);
+      color: #0f0e0c;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* ── SECTION SHARED ── */
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 16px auto 50px;
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      padding: 80px 6%;
+      text-align: center;
+      background: var(--white);
+    }
+
+    #services .section-title { color: var(--dark2); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .service-card {
+      padding: 50px 36px 46px;
+      text-align: center;
+      border-right: 1px solid #eee;
+      transition: box-shadow 0.25s;
+    }
+
+    .service-card:last-child { border-right: none; }
+    .service-card:hover { box-shadow: 0 8px 32px rgba(201,168,76,0.12); }
+
+    .service-icon {
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 24px;
+      color: var(--gold);
+      display: block;
+    }
+
+    .service-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 23px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--dark2);
+    }
+
+    .service-card p { font-size: 15px; color: #777; line-height: 1.7; }
+
+    /* ── PROCESS ── */
+    #process {
+      position: relative;
+      padding: 80px 6%;
+      text-align: center;
+      background: url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg') center top / cover no-repeat;
+    }
+
+    .process-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,7,5,0.92);
+    }
+
+    .process-inner { position: relative; z-index: 1; }
+
+    #process .section-title { color: var(--white); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .step {
+      padding: 12px 28px;
+      border-right: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .step:last-child { border-right: none; }
+
+    .step-icon {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 18px;
+      color: var(--gold);
+      display: block;
+    }
+
+    .step p { font-size: 15px; color: var(--white80); line-height: 1.6; }
+    .step strong { color: var(--white); font-weight: 700; display: block; margin-bottom: 5px; font-size: 16px; }
+
+    /* ── CONTACT ── */
+    #contact {
+      padding: 80px 6%;
+      text-align: center;
+      background: var(--white);
+    }
+
+    #contact .section-title { color: var(--dark2); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--dark2);
+      margin-bottom: 28px;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 12px; }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      background: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      color: var(--dark2);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--gold); }
+
+    .contact-form textarea { height: 120px; resize: none; }
+
+    .form-submit { text-align: right; margin-top: 4px; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      background: url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg') center bottom / cover no-repeat;
+    }
+
+    .footer-overlay {
+      background: rgba(8,7,5,0.94);
+      padding: 36px 6%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 2.4;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer-overlay a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-overlay a:hover { color: var(--gold-light); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      h1 { font-size: 36px; }
+      .logo { font-size: 18px; }
+      nav { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { border-right: none; border-bottom: 1px solid #eee; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .step { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.2); }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── FORM SUCCESS ── */
+    .form-success {
+      display: none;
+      padding: 16px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--gold);
+      color: var(--gold-dark);
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO + HEADER -->
+<div class="hero-wrapper">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <header>
+    <a href="#" class="logo">Antellis Real Estate Services <span>LLC</span></a>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero-content-wrap">
+    <div class="hero-content">
+      <div class="eyebrow">Fort Worth, Texas — Real Estate Services</div>
+      <h1>Professional Real Estate <em>Solutions</em> in Texas</h1>
+      <p class="hero-sub">Texas-based investor acquiring, holding, and assigning properties — giving homeowners a faster, simpler path to sold.</p>
+      <a href="#contact" class="btn">Request Property Review</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-title">Our Services</div>
+  <div class="divider"></div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="service-icon">
+        <path d="M8 28 L32 10 L56 28 L56 56 L8 56 Z"/>
+        <rect x="22" y="38" width="10" height="18" rx="1"/>
+        <rect x="36" y="38" width="10" height="10" rx="1"/>
+      </svg>
+      <h3>Direct Property Purchases</h3>
+      <p>Fast, flexible offers for a variety of property situations.</p>
+    </div>
+
+    <div class="service-card">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="service-icon">
+        <rect x="8" y="24" width="48" height="32" rx="1"/>
+        <path d="M8 36 L56 36"/>
+        <path d="M20 24 L20 18 L44 18 L44 24"/>
+        <path d="M32 10 L50 24 L14 24 Z"/>
+        <circle cx="32" cy="46" r="5"/>
+      </svg>
+      <h3>Investment Property Sourcing</h3>
+      <p>Off-market opportunities for investors.</p>
+    </div>
+
+    <div class="service-card">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="service-icon">
+        <path d="M10 56 L10 22 L32 8 L54 22 L54 56"/>
+        <rect x="22" y="40" width="10" height="16"/>
+        <rect x="36" y="30" width="10" height="10"/>
+        <path d="M4 56 L60 56"/>
+      </svg>
+      <h3>Distressed Property Solutions</h3>
+      <p>Assistance with inherited or vacant homes.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-overlay"></div>
+  <div class="process-inner">
+    <div class="section-title">Our Process</div>
+    <div class="divider"></div>
+    <div class="process-steps">
+
+      <div class="step">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="step-icon">
+          <rect x="14" y="8" width="36" height="48" rx="2"/>
+          <path d="M22 22 L42 22"/><path d="M22 30 L42 30"/><path d="M22 38 L34 38"/>
+          <path d="M38 44 L44 50 L56 38"/>
+        </svg>
+        <p><strong>1. Submit Property</strong>Information</p>
+      </div>
+
+      <div class="step">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="step-icon">
+          <rect x="8" y="20" width="48" height="36" rx="2"/>
+          <path d="M8 30 L56 30"/>
+          <path d="M20 20 L20 12 L44 12 L44 20"/>
+          <circle cx="32" cy="44" r="6"/>
+        </svg>
+        <p><strong>2. Property &amp; Market</strong>Review</p>
+      </div>
+
+      <div class="step">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="step-icon">
+          <path d="M8 12 Q8 8 12 8 L52 8 Q56 8 56 12 L56 38 Q56 42 52 42 L36 42 L26 54 L26 42 L12 42 Q8 42 8 38 Z"/>
+          <path d="M20 22 L44 22"/><path d="M20 30 L36 30"/>
+        </svg>
+        <p><strong>3. Offer</strong>Discussion</p>
+      </div>
+
+      <div class="step">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" class="step-icon">
+          <rect x="10" y="14" width="44" height="38" rx="2"/>
+          <path d="M10 26 L54 26"/>
+          <path d="M22 14 L22 8"/><path d="M42 14 L42 8"/>
+          <path d="M20 38 L28 46 L46 34"/>
+        </svg>
+        <p><strong>4. Close On</strong>Your Timeline</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title">Contact Us</div>
+  <div class="divider"></div>
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <div class="contact-label">Call Us</div>
+      <div class="contact-value">(817) 842-3400</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">info@antellisreservices.com</div>
+      <br/><br/>
+      <a href="#contact" class="btn">Send Message</a>
+    </div>
+
+    <div class="contact-form" id="contactForm">
+      <input type="text"  id="fname"    placeholder="Name"    required />
+      <input type="tel"   id="fphone"   placeholder="Phone"   required />
+      <input type="email" id="femail"   placeholder="Email"   required />
+      <input type="text"  id="faddress" placeholder="Property Address (optional)" />
+      <textarea           id="fmessage" placeholder="Message / Situation"></textarea>
+      <div class="form-submit">
+        <button class="btn" onclick="submitForm()">Send</button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        ✓ Thank you! We'll be in touch within 24 hours.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-overlay">
+    <p>© 2026 Antellis Real Estate Services LLC. A Texas Limited Liability Company. Serving Fort Worth and surrounding areas.</p>
+    <p>
+      <a href="/privacy-policy">Privacy Policy</a> |
+      <a href="/terms-and-conditions">Terms of Use</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id], .hero-wrapper');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id || '';
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current || (current === '' && a.getAttribute('href') === '#'));
+    });
+  });
+
+  // Form submit — connects to Power Automate HTTP trigger later
+  function submitForm() {
+    const name    = document.getElementById('fname').value.trim();
+    const phone   = document.getElementById('fphone').value.trim();
+    const email   = document.getElementById('femail').value.trim();
+    const address = document.getElementById('faddress').value.trim();
+    const message = document.getElementById('fmessage').value.trim();
+
+    if (!name || !phone) {
+      alert('Please enter your name and phone number.');
+      return;
+    }
+
+    // TODO: Replace with your Power Automate HTTP trigger URL
+    const POWER_AUTOMATE_URL = 'YOUR_POWER_AUTOMATE_HTTP_TRIGGER_URL';
+
+    const payload = { name, phone, email, address, message, source: 'Website Form' };
+
+    // When Power Automate URL is ready, uncomment this:
+    /*
+    fetch(POWER_AUTOMATE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    */
+
+    // Show success message
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('fname').value = '';
+    document.getElementById('fphone').value = '';
+    document.getElementById('femail').value = '';
+    document.getElementById('faddress').value = '';
+    document.getElementById('fmessage').value = '';
+
+    console.log('Lead submitted:', payload);
+  }
+</script>
+
+</body>
+</html>
